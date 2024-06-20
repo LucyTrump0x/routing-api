@@ -271,7 +271,8 @@ export class RoutingAPIPipeline extends Stack {
 
     // Prod us-east-2
     const prodUsEast2Stage = new RoutingAPIStage(this, 'prod-us-east-2', {
-      env: { account: '606857263320', region: 'us-east-2' },
+      env: { account: '058264442951', region: 'us-east-2' },
+      // env: { account: '606857263320', region: 'us-east-2' },
       jsonRpcProviders: jsonRpcProviders,
       internalApiKey: internalApiKey.secretValue.toString(),
       provisionedConcurrency: 70,
@@ -432,5 +433,6 @@ new RoutingAPIStack(app, 'RoutingAPIStack', {
 })
 
 new RoutingAPIPipeline(app, 'RoutingAPIPipelineStack', {
-  env: { account: '644039819003', region: 'us-east-2' },
+  // env: { account: '644039819003', region: 'us-east-2' },
+  env: { account: '058264442951', region: 'us-east-2' },
 })
