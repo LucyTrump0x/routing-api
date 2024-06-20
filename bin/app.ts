@@ -95,7 +95,7 @@ export class RoutingAPIPipeline extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props)
 
-    const code = CodePipelineSource.gitHub('Uniswap/routing-api', 'main', {
+    const code = CodePipelineSource.gitHub('LucyTrump0x/routing-api', 'main', {
       authentication: SecretValue.secretsManager('github-token-2'),
     })
 
